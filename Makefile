@@ -1,11 +1,13 @@
 PREFIX ?= /data/data/hilled.pwnterm/files/usr
 
 all: install
-	@echo Run \'make install\' to install so told dummy
+	@echo Done
 
 install:
+	@echo Installing
 	@mkdir -p $(PREFIX)/home
+	@touch $(PREFIX)/home/.dummy
 
 uninstall:
-	@echo nah
+	@rm -f $(PREFIX)/home/.dummy
 
